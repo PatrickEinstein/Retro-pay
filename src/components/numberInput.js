@@ -1,10 +1,11 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid";
+import { useMediaQuery } from "@material-ui/core";
 
 const NumberInput = () => {
   const [digits, setDigits] = React.useState(["", "", "", "", "", ""]);
-
+  const isNonMobileScreen = useMediaQuery("(min-width: 600px)");
   const handleChange = (index, value) => {
     const updatedDigits = [...digits];
     updatedDigits[index] = value;
@@ -25,10 +26,13 @@ const NumberInput = () => {
       container
       spacing={1}
       sx={{
-        paddingLeft: 2,
+        // paddingLeft: 2,
         paddingTop: 2,
         paddingBottom: 2,
+        flexWrap: "nowrap"
       }}
+      justifyContent="center"
+      alignItems="center"
     >
       {digits.map((digit, index) => (
         <Grid item key={index}>

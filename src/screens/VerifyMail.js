@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, IconButton, Stack, Typography } from "@mui/material";
-import MyButtons from "../components/button";
+import CachedIcon from "@mui/icons-material/Cached";
 import NumberInput from "../components/numberInput";
 
 const VerifyMail = () => {
@@ -73,7 +73,7 @@ const VerifyMail = () => {
         sx={{
           position: "absolute",
           top: 420,
-          left: 180,
+          left: 150,
         }}
       >
         <Typography
@@ -82,9 +82,9 @@ const VerifyMail = () => {
             textAlign: "center",
           }}
         >
-          {/* <IconButton>
-            <Reload />
-          </IconButton> */}
+          <IconButton>
+            <CachedIcon />
+          </IconButton>
           Send code in{" "}
           <span
             style={{

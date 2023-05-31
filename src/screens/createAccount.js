@@ -9,11 +9,12 @@ import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import EmailIcon from "@material-ui/icons/Email";
 import { pink } from "@mui/material/colors";
-import { Link } from "react-router-dom";
+import { useMediaQuery } from "@material-ui/core";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const CreateAccount = () => {
+  const isNonMobileScreen = useMediaQuery("(min-width: 600px)");
   return (
     <Stack
       spacing={2}
@@ -66,7 +67,7 @@ const CreateAccount = () => {
           ),
         }}
       />
-      <Stack spacing={10}>
+      <Stack spacing={isNonMobileScreen ? 12 : 8}>
         <Stack
           direction="row"
           sx={{
@@ -90,7 +91,7 @@ const CreateAccount = () => {
           <Typography
             sx={{
               paddingTop: 2,
-              fontSize: 12,
+              fontSize: isNonMobileScreen ? 12 : 8,
             }}
           >
             I agree to Retropay's

@@ -40,7 +40,7 @@ export default function Dialogue({ title, body }) {
     >
       <DialogContent
         sx={{
-          height: 1000,
+          height: 500,
           overflow: "hidden",
           width: "auto%",
           marginBottom: "auto",
